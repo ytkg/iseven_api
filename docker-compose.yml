@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: "deployctl run --watch app.js"
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
